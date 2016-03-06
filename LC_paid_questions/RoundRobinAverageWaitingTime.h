@@ -17,10 +17,12 @@
 
 using namespace std;
 
-struct Proc{
+class Proc{
+public:
     int arr;
     int exec;
     Proc(int a, int e):arr(a),exec(e){}
+    ~Proc(){}
 };
 
 float RoundRobinAverageWaitingTime(vector<int>& arrival, vector<int>& run, int q){
