@@ -17,6 +17,9 @@
 #include <algorithm>
 using namespace std;
 
+//Refer to :
+//http://fenghaolw.blogspot.com/2014/01/stock-maximize.html
+
 int64_t maxProfit(vector<int> &prices){
     int N = prices.size();
     if(N<=1) return 0;
