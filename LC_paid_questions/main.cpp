@@ -12,8 +12,8 @@
 //#include "RotateString.h"
 //#include "roundrobinaveragewaitingtime.h"
 //#include "InsertInCyclicLinkedList.h"
-#include "FirstRepeatingLetterInString.h"
-//#include "StockMaximize.h"
+//#include "FirstRepeatingLetterInString.h"
+#include "StockMaximize.h"
 
 //using namespace std;
 

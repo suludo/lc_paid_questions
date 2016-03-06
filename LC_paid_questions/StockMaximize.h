@@ -9,7 +9,6 @@
 #ifndef StockMaximize_h
 #define StockMaximize_h
 
-
 #include <cmath>
 #include <cstdio>
 #include <vector>
@@ -31,7 +30,7 @@ int64_t maxProfit(vector<int> &prices){
             stk.push(i);
         }
     }
-    int64_t ret = 0;
+    int64_t ret = 0, tmp = 0;
     for(int i=0; i<N; i++){
         if(i<stk.top()){
             ret += (prices[stk.top()]-prices[i]);
@@ -45,16 +44,16 @@ int64_t maxProfit(vector<int> &prices){
 
 vector<vector<int>> parseTestCases(){
     int n=0;
-    cout<<"Number of test cases: ";
+    //cout<<"Number of test cases: ";
     cin>>n;
     vector<vector<int>> ret(n);
     for(int i=0; i<n; i++){
-        cout<<"Case "<<i+1<<" # prices: ";
+        //cout<<"Case "<<i+1<<" # prices: ";
         int np=0;
         cin>>np;
         int p=-1;
         for(int j=0; j<np; j++){
-            cout<<"Case "<<i+1<<" Price "<<j+1<<" is: ";
+            //cout<<"Case "<<i+1<<" Price "<<j+1<<" is: ";
             cin>>p;
             ret[i].push_back(p);
         }
@@ -62,12 +61,12 @@ vector<vector<int>> parseTestCases(){
     return ret;
 }
 
-void test() {
+int test() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     vector<vector<int>> testPack = parseTestCases();
     for(int i=0; i<testPack.size(); i++)
-        cout<<"Case 1 result: "<<maxProfit(testPack[i])<<endl;
-    //return 0;
+        cout<<maxProfit(testPack[i])<<endl;
+    return 0;
 }
 
 
